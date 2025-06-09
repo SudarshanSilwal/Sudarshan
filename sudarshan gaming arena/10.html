@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download a Game Engine for Linux</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+    :root {
+      --text-gray: #6b7280;
+      --bg-light: #ffffff;
+      --btn-bg: #000000;
+      --btn-text: #ffffff;
+      --btn-hover-bg: #111111;
+      --card-shadow: rgba(0,0,0,0.1);
+      --border-radius: 0.75rem;
+      --font-family: 'Poppins', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-light);
+      font-family: var(--font-family);
+      color: var(--text-gray);
+      line-height: 1.6;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1rem;
+      box-shadow: 0 2px 6px var(--card-shadow);
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--btn-bg);
+      user-select: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: var(--btn-bg);
+      outline: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 0 3rem 0;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin: 0 0 1rem 0;
+      color: var(--btn-bg);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--text-gray);
+      font-size: 1.25rem;
+    }
+
+    .btn-primary {
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: var(--border-radius);
+      font-weight: 700;
+      font-size: 1.125rem;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: background-color 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: var(--btn-hover-bg);
+      outline: none;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+    }
+
+    .card {
+      background: #f9f9f9;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: 0 10px 15px var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      color: #333333;
+    }
+
+    .card h2 {
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin: 0;
+      color: var(--btn-bg);
+    }
+
+    .card p {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      padding: 1rem 0;
+      user-select: none;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">GameDev Linux</div>
+    <nav>
+      <a href="#godot">Godot</a>
+      <a href="#unity">Unity</a>
+    </nav>
+  </header>
+
+  <div class="container" role="main">
+    <section class="hero">
+      <h1>Download a Game Engine for Linux</h1>
+      <p>Choose one of the popular game engines below and follow simple instructions to get started developing games on your Linux system.</p>
+    </section>
+
+    <main>
+      <article class="card" id="godot" tabindex="0" aria-labelledby="godot-title">
+        <h2 id="godot-title">Godot Engine</h2>
+        <p>Godot is a free, open-source, and feature-rich game engine that works natively on Linux. It supports 2D and 3D game development with an easy-to-learn interface.</p>
+        <a 
+          class="btn-primary" 
+          href="https://godotengine.org/download/linux" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="Download Godot engine for Linux"
+        >
+          Download Godot
+        </a>
+      </article>
+
+      <article class="card" id="unity" tabindex="0" aria-labelledby="unity-title">
+        <h2 id="unity-title">Unity Engine</h2>
+        <p>Unity supports Linux both as a development platform and for building games that run on Linux. Download the Unity Hub AppImage for an easy installation on Linux.</p>
+        <a 
+          class="btn-primary" 
+          href="https://unity.com/download" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="Download Unity Hub for Linux"
+        >
+          Download Unity Hub
+        </a>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2024 GameDev Linux. All rights reserved.
+  </footer>
+</body>
+</html>
+
